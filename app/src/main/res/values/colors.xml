@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#60401f</color>
+    <color name="colorPrimaryDark">#744d25</color>
+    <color name="colorAccent">#ff9933</color>
+
+
+    <color name="colorhighlighSure">#ffa64d</color>
+
+    <color name="skip_red_color">#ff0000</color>
+    <color name="brown_color">#663300</color>
+
+
+    <color name="background">#d6d6c2</color>
+
+    <color name="green">#00ff00</color>
+    <color name="nav_header_color">#996633</color>
+
+    <color name="link_color">#0040ff</color>
+    <color name="recycler_background">#dec0a0</color>
+
+</resources>
