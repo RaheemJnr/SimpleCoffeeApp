@@ -1,15 +1,14 @@
 package com.example.coffeeapp.screens.Developer
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.coffeeapp.R
 import com.example.coffeeapp.databinding.FragmentDeveloperBinding
+import com.example.coffeeapp.openUrl
 
 
 /**
@@ -35,15 +34,16 @@ class Developer : Fragment() {
 
         binding.ContactLink.setOnClickListener {
             //share intent using ShareCompact
-            fun shareIntent(): Intent {
-
-                return ShareCompat.IntentBuilder.from(requireActivity())
-                    .setType("text/plain")
-                    .setEmailTo(arrayOf(EMAIL))
-                    .setSubject("Hey MotherFucker What is Wrong With The App")
-                    .intent
-            }
-            startActivity(shareIntent())
+//            fun shareIntent(): Intent {
+//
+//                return ShareCompat.IntentBuilder.from(requireActivity())
+//                    .setType("text/plain")
+//                    .setEmailTo(arrayOf(EMAIL))
+//                    .setSubject("Hey MotherFucker What is Wrong With The App")
+//                    .intent
+//            }
+            //startActivity(shareIntent())
+            this.context?.openUrl("https://github.com/RaheemJnr")
 
         }
 
