@@ -32,7 +32,7 @@ class HistoryFragment : Fragment() {
         val application = requireNotNull(this.activity).application
         val dataSource = CoffeeDatabase.getInstance(application).CoffeeDAO
         val viewModelFactory = HistoryViewModelFactory(dataSource, application)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(HistoryViewModel::class.java)
+        viewModel = ViewModelProvider(this, viewModelFactory)[HistoryViewModel::class.java]
 
         //connect xml layout to viewModel
         binding.viewModel = viewModel
@@ -43,11 +43,11 @@ class HistoryFragment : Fragment() {
         binding.coffeeHistoryList.adapter = adapter
 
         //display all poems in the database using recyclerView
-        viewModel.allCoffeeHistory.observe(viewLifecycleOwner, {
+        viewModel.allCoffeeHistory.observe(viewLifecycleOwner) {
             it?.let {
                 adapter.submitList(it)
             }
-        })
+        }
 
 
         //

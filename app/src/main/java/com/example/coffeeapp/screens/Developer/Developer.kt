@@ -19,7 +19,6 @@ class Developer : Fragment() {
 
     private lateinit var binding: FragmentDeveloperBinding
 
-    private val EMAIL = "Mumedian6@gmail.com"
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

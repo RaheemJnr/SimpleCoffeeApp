@@ -21,7 +21,7 @@ class HistoryViewModel(private val database: CoffeeDAO, application: Application
 //        it.toString()
 //    }
 
-    //delete a poem from the dataBase use Fab in xml
+
     fun discard() {
         viewModelScope.launch {
             delete()
