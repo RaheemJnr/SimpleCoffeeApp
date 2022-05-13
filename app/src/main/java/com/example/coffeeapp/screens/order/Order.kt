@@ -54,7 +54,7 @@ class Order : Fragment() {
         val application = requireNotNull(this.activity).application
         val dataSource = CoffeeDatabase.getInstance(application).CoffeeDAO
         val viewModelFactory = OrderViewModelFactory(dataSource, application)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(OrderViewModel::class.java)
+        viewModel = ViewModelProvider(this, viewModelFactory)[OrderViewModel::class.java]
 
 
         //place order text formatting
